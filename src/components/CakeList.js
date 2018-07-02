@@ -7,6 +7,7 @@ const CakeList = ({ cakes }) => (
     {
       cakes.map(cake => (
         <Cake
+          key={cake.id}
           id={cake.id}
           name={cake.name}
           imageUrl={cake.imageUrl}
