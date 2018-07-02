@@ -1,15 +1,16 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
-const CakeView = ({ cake, history }) => (
+const CakeView = ({ cake }) => (
   <div className="cake-view">
+    <Link to="/">
     <div
       className="button"
       title="close"
-      onClick={() => history.push('/')}
     >
       X
     </div>
+  </Link>
     <h2>{ cake.name }</h2>
     <img src={cake.imageUrl} alt={cake.name} />
     <p className="comment">
@@ -19,4 +20,4 @@ const CakeView = ({ cake, history }) => (
   </div>
 );
 
-export default withRouter(CakeView);
+export default CakeView;
