@@ -17,7 +17,7 @@ CakeItem.propTypes = {
   /**
    * The id number of the cake
    */
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 
   /**
    * The name of the cake
