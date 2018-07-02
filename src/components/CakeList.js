@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import Cake from './Cake';
 
-const CakeList = ({ cakes }) => (
+const CakeList = ({ cakes, history }) => (
   <div className="cakelist">
     {
       cakes.map(cake => (
@@ -14,6 +15,8 @@ const CakeList = ({ cakes }) => (
         />
       ))
     }
+
+    <button onClick={() => history.push('/cake/create')}>Add Cake</button>
   </div>
 );
 
@@ -32,4 +35,4 @@ CakeList.propTypes = {
   ).isRequired,
 };
 
-export default CakeList;
+export default withRouter(CakeList);
