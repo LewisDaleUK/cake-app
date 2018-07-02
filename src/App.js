@@ -11,6 +11,7 @@ class App extends Component {
             <h1 className="app-title">Cake App</h1>
           </header>
           <div className="content">
+            <Route exact path="/" component={() => (<h1>Cake List</h1>)} />
           </div>
         </div>
       </Router>
