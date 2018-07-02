@@ -25,7 +25,6 @@ export default class CreateCakeContainer extends Component {
   }
 
   onSubmit(event) {
-    console.log(this.state.cake);
     event.preventDefault();
     const { history } = this.props;
     history.push('/');
