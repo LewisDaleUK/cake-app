@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CakeItem = ({ id, name, imageUrl }) => (
-  <div className='cake'>
-    <img src={imageUrl} alt={name} />
-    <p className='cake-name'>{ name }</p>
-  </div>
+  <Link to={`/cake/${id}`}>
+    <div className='cake'>
+      <img src={imageUrl} alt={name} />
+      <p className='cake-name'>{ name }</p>
+    </div>
+  </Link>
 );
 
 CakeItem.propTypes = {
