@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Cake = ({ id, name, imageUrl }) => (
+const CakeItem = ({ id, name, imageUrl }) => (
   <div className='cake'>
     <img src={imageUrl} alt={name} />
     <p className='cake-name'>{ name }</p>
   </div>
 );
 
-Cake.propTypes = {
+CakeItem.propTypes = {
   /**
    * The id number of the cake
    */
@@ -25,4 +25,4 @@ Cake.propTypes = {
   imageUrl: PropTypes.string.isRequired,
 };
 
-export default Cake;
+export default CakeItem;

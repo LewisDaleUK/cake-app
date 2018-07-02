@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import Cake from './Cake';
+import CakeItem from './CakeItem';
 
 const CakeList = ({ cakes, history }) => (
   <div className="cakelist">
     {
       cakes.map(cake => (
-        <Cake
+        <CakeItem
           key={cake.id}
           id={cake.id}
           name={cake.name}
