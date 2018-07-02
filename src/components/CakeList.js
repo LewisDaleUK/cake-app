@@ -36,7 +36,7 @@ CakeList.propTypes = {
    */
   cakes: PropTypes.arrayOf(
     PropTypes.shape({
-      'id': PropTypes.number.isRequired,
+      'id': PropTypes.string.isRequired,
       'name': PropTypes.string.isRequired,
       'comment': PropTypes.string.isRequired,
       'imageUrl': PropTypes.string.isRequired,

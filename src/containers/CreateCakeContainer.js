@@ -25,9 +25,17 @@ export default class CreateCakeContainer extends Component {
   }
 
   onSubmit(event) {
-    event.preventDefault();
     const { history } = this.props;
-    history.push('/');
+    event.preventDefault();
+
+    fetch('http://ec2-34-243-153-154.eu-west-1.compute.amazonaws.com:5000/api/cakes', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state.cake)
+    }).then(() => history.push('/'));
   }
 
   render() {
