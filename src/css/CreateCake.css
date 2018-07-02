@@ -1,0 +1,9 @@
+.cake-create form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.cake-create form > div {
+  margin-bottom: 15px;
+}
