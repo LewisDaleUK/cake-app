@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import CakeListContainer from './containers/CakeListContainer';
 import './App.css';
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
             <h1 className="app-title">Cake App</h1>
           </header>
           <div className="content">
-            <Route exact path="/" component={() => (<h1>Cake List</h1>)} />
+            <Route exact path="/" component={() => (<CakeListContainer />)} />
           </div>
         </div>
       </Router>
