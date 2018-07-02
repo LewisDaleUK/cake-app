@@ -15,4 +15,4 @@ const cakes = [
   },
 ];
 
-export cakes;
+export default cakes;
