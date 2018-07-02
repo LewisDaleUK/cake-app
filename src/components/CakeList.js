@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
 import CakeItem from './CakeItem';
+import '../css/CakeList.css';
 
 const CakeList = ({ cakes, history }) => (
   <div className="cakelist">
@@ -16,7 +19,14 @@ const CakeList = ({ cakes, history }) => (
       ))
     }
 
-    <button onClick={() => history.push('/cake/create')}>Add Cake</button>
+    <Button
+      variant="fab"
+      color="primary"
+      aria-label="Add"
+      onClick={() => history.push('/cake/create')}
+    >
+      <AddIcon />
+    </Button>
   </div>
 );
 

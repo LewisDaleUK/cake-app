@@ -1,5 +1,7 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 import CakeListContainer from './containers/CakeListContainer';
 import CreateCakeContainer from './containers/CreateCakeContainer';
 import ViewCakeContainer from './containers/ViewCakeContainer';
@@ -11,14 +13,18 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <header className="app-header">
-            <h1 className="app-title">Cake App</h1>
-          </header>
+          <AppBar position="static" color="primary">
+            <Typography variant="title" color="inherit">
+              Cake App
+            </Typography>
+          </AppBar>
           <div className="content">
-            <Route exact path="/" component={CakeListContainer} />
-            <Route path="/cake/create" component={CreateCakeContainer} />
-            <Route path="/cake/:id" component={ViewCakeContainer} />
-            <Route component={NotFound} />
+            <Switch>
+              <Route exact path="/" component={CakeListContainer} />
+              <Route exact path="/cake/create" component={CreateCakeContainer} />
+              <Route path="/cake/:id" component={ViewCakeContainer} />
+              <Route component={NotFound} />
+            </Switch>
           </div>
         </div>
       </Router>
